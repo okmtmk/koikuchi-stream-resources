@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        font-size: 48pt;
+
+        color: #000000;
+        font-family: 'Noto Sans CJK JP';
+        line-height: 2;
+    }
+
+    body {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .text-accent {
+        color: #FF5722 !important;
+    }
+
+    .frame {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #FFFFFF;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 400px;
+        height: 300px;
+
+        z-index: 2;
+    }
+
+    .logo-container>img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .container {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container>div:nth-child(1) {
+        font-size: 100pt;
+        font-weight: bold;
+
+        font-family: 'Futura PT';
+    }
+
+    .container>div:nth-child(2) {
+        font-size: 36pt;
+        padding: 0 .5rem;
+        font-weight: bold;
+        color: #FFFFFF;
+
+        position: relative;
+    }
+
+    .container>div:nth-child(2):before {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        border-radius: 12px;
+        background-color: #FF5722;
+        z-index: -1;
+    }
+
+    .see-you-later {
+        position: absolute;
+        text-align: center;
+
+        bottom: 2rem;
+        width: 100%;
+
+        font-size: 24pt;
+        color: #BDBDBD;
+    }
+</style>
+
+<body>
+    <div class="frame">
+        <div class="logo-container">
+            <img src="../0-1_logo/logo_black.png" />
+        </div>
+        <div class="container">
+            <div>
+                Thank you Everybody!
+            </div>
+            <div>
+                ご視聴ありがとうございました
+            </div>
+        </div>
+
+        <div class="see-you-later">
+            たぶん、またやる。
+        </div>
+    </div>
+</body>
+
+</html>

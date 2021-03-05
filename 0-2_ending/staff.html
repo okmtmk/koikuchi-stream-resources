@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        font-size: 48pt;
+
+        color: #FFFFFF;
+        font-family: 'Noto Sans CJK JP';
+        line-height: 1.4;
+    }
+
+    .text-md {
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    body {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .text-accent {
+        color: #FF5722 !important;
+    }
+
+    .frame {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #000000;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 400px;
+        height: 300px;
+
+        z-index: 2;
+    }
+
+    .logo-container>img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .container {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container>div:nth-child(1) {
+        text-align: left;
+    }
+
+    .container>div {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .container>div>div:nth-child(1) {
+        margin-right: 3rem;
+    }
+
+    .container>div>div>p {
+        font-weight: bold;
+        font-size: 36pt !important;
+        margin-top: 0;
+
+        margin-bottom: .5rem;
+    }
+
+
+    .player {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .player>div:nth-child(1) {
+        font-size: 36pt;
+    }
+
+    .player>div:nth-child(2) {
+        line-height: 1;
+        font-size: 60pt;
+        font-weight: bold;
+        margin-bottom: .5rem;
+    }
+
+    .subpane * {
+        font-size: 36pt !important;
+    }
+
+    .subpane>div {
+        margin-bottom: .5rem;
+    }
+
+    .mb {
+        margin-bottom: 1rem !important;
+    }
+
+    .subpane>div>div:nth-child(1) {
+        font-size: 24pt !important;
+    }
+
+    .subpane div>div:nth-child(2) {
+        font-size: 36pt;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .special-thanks>div {
+        width: 400px;
+    }
+
+    .special-thanks>div>img {
+        width: 100%;
+        object-fit: contain;
+    }
+</style>
+
+<body>
+    <div class="frame">
+        <div class="logo-container">
+            <img src="../0-1_logo/logo_white.png" />
+        </div>
+        <div class="container">
+            <div>
+                <div>
+                    <p>Players</p>
+                    <div class="player">
+                        <div class="text-md">
+                            1st Player
+                        </div>
+                        <div>
+                            さい
+                        </div>
+                    </div>
+                    <div class="player">
+                        <div class="text-md">
+                            2nd Player
+                        </div>
+                        <div>
+                            まっしゅ
+                        </div>
+                    </div>
+                    <div class="player">
+                        <div class="text-md">
+                            3rd Player
+                        </div>
+                        <div>
+                            おかもと
+                        </div>
+                    </div>
+                </div>
+                <div class="subpane">
+                    <p>Staff</p>
+                    <div>
+                        <div class="text-md">
+                            Director
+                        </div>
+                        <div>おかもと</div>
+                    </div>
+                    <div class="mb">
+                        <div class="text-md">
+                            Logo Creation
+                        </div>
+                        <div>
+                            塩パセリ
+                        </div>
+                    </div>
+
+                    <p>Special Thanks</p>
+                    <div class="special-thanks">
+                        <div>
+                            <img src="../0-1_logo/hnkr.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
