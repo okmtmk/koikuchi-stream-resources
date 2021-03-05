@@ -18,6 +18,10 @@
         color: #FF5722 !important;
     }
 
+    .text-strong {
+        color: #000000 !important;
+    }
+
     .frame {
         position: relative;
         width: 100vw;
@@ -91,20 +95,20 @@
         font-weight: bold;
     }
 
-    @keyframes fade-switch-2-contents {
+    @keyframes fade-switch-4-contents {
         0% {
             opacity: 0;
         }
 
-        5% {
+        2.5% {
             opacity: 1;
         }
 
-        45% {
+        22.5% {
             opacity: 1;
         }
 
-        50% {
+        25% {
             opacity: 0
         }
 
@@ -114,11 +118,19 @@
     }
 
     .navigator-container>.card>.text-container:nth-child(1) {
-        animation: fade-switch-2-contents 20s infinite both;
+        animation: fade-switch-4-contents 40s infinite both;
     }
 
     .navigator-container>.card>.text-container:nth-child(2) {
-        animation: fade-switch-2-contents 20s 10s infinite both;
+        animation: fade-switch-4-contents 40s 10s infinite both;
+    }
+
+    .navigator-container>.card>.text-container:nth-child(3) {
+        animation: fade-switch-4-contents 40s 20s infinite both;
+    }
+
+    .navigator-container>.card>.text-container:nth-child(4) {
+        animation: fade-switch-4-contents 40s 30s infinite both;
     }
 
     .main-container {
@@ -156,42 +168,25 @@
     }
 
     .main-container>.koikuchi>div:nth-child(1)>img {
-        width: 800px;
+        width: 600px;
         object-fit: contain;
     }
 
-    .main-container>.koikuchi>div:nth-child(1)>.time {
-        font-size: 72pt;
+    .main-container>.koikuchi>div:nth-child(1)>.header {
+        font-size: 48pt;
         font-family: 'Futura PT';
         letter-spacing: 12pt;
     }
 
-    .main-container>.koikuchi>div:nth-child(2) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .main-container>.koikuchi>div:nth-child(2)>table {
-        margin-top: 2rem;
-        margin-left: 1rem;
-    }
-
-    .main-container>.koikuchi>div:nth-child(2)>table>tbody>tr {
-        padding: 0.25rem 0;
-        display: block;
-    }
-
-    .main-container>.koikuchi>div:nth-child(2)>table>tbody>tr>td {
-        font-size: 36pt;
-        padding-right: 1rem;
-    }
-
-    .main-container>.koikuchi>div:nth-child(2)>table>tbody>tr>th {
+    .main-container>.koikuchi>div:nth-child(1)>.subtitle {
+        margin-top: .5rem;
         font-size: 60pt;
         font-weight: bold;
-        text-align: start;
-        color: #000000;
+    }
+
+    .main-container>.koikuchi>div:nth-child(1)>.description {
+        font-size: 36pt;
     }
 </style>
 
@@ -203,8 +198,20 @@
         <div class="navigator-container">
             <div class="card">
                 <div class="text-container">
+                    <div class="text text-accent">
+                        オープニングプレイ放送中
+                    </div>
+                </div>
+
+                <div class="text-container">
                     <div class="text">
-                        配信開始までお待ちください。
+                        オープニングは<span class="text-accent">プレイヤー全員</span>で2曲ずつミックス！
+                    </div>
+                </div>
+
+                <div class="text-container">
+                    <div class="text">
+                        本編放送までもうちょっとだけお待ちください。
                     </div>
                 </div>
 
@@ -219,26 +226,12 @@
             <div class="koikuchi">
                 <div>
                     <img src="../logo/logo_black.png" />
-                    <div class="time">
-                        Start 22:00
+                    <div class="header">
+                        Opening Play
                     </div>
-                </div>
-                <div>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>1st</td>
-                                <th>さい</th>
-                            </tr>
-                            <tr>
-                                <td>2nd</td>
-                                <th>まっしゅ</th>
-                            </tr>
-                            <tr>
-                                <td>3rd</td>
-                                <th>おかもと</th>
-                            </tr>
-                        </tbody>
+                    <div class="subtitle text-strong">
+                        リモート"B2B2B"っぽいミキシング
+                    </div>
                 </div>
             </div>
         </div>
