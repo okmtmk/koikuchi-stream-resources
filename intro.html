@@ -1,0 +1,279 @@
+<style>
+    * {
+        color: white;
+        font-size: 96pt;
+        font-family: Noto Sans CJK JP;
+        line-height: 1.4;
+    }
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .frame>div {
+        height: 1080px;
+        width: 1920px;
+        position: relative;
+    }
+
+    .frame>div>div {
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black !important;
+        z-index: 10;
+
+        animation: mask-disable 500ms linear forwards;
+    }
+
+    @keyframs mask-enable {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes mask-disable {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes left2right {
+        from {
+            transform: translateX(-50%) scaleX(0);
+        }
+
+        to {
+            transform: translateX(0) scaleX(1);
+        }
+    }
+
+    @keyframes right2left {
+        from {
+            transform: translateX(50%) scaleX(0);
+        }
+
+        to {
+            transform: translateX(0) scaleX(1);
+        }
+    }
+
+    @keyframes right2left-out {
+        from {
+            transform: translateX(0%) scaleX(1);
+        }
+
+        to {
+            transform: translateX(-50%) scaleX(0);
+        }
+    }
+
+    @keyframes top2bottom {
+        from {
+            transform: translateY(-50%) scaleY(0);
+        }
+
+        to {
+            transform: translateY(0) scaleY(1);
+        }
+    }
+
+    @keyframes bottom2top {
+        from {
+            transform: translateY(50%) scaleY(0);
+        }
+
+        to {
+            transform: translateY(0) scaleY(1);
+        }
+    }
+
+    @keyframes top2bottom-out {
+        from {
+            transform: translateY(0) scaleY(1);
+        }
+
+        to {
+            transform: translateY(50%) scaleY(0);
+        }
+    }
+
+    .frame>div>div:nth-child(1) {
+        left: 450px;
+        top: 50px;
+        right: 50px;
+
+        height: 4px;
+        animation: left2right 1000ms 500ms backwards ease-out;
+    }
+
+    .frame>div>div:nth-child(2) {
+        top: 50px;
+        right: 50px;
+        bottom: 50px;
+
+        width: 4px;
+        animation: top2bottom 1000ms 1500ms backwards ease-out;
+    }
+
+    .frame>div>div:nth-child(3) {
+        left: 50px;
+        top: 250px;
+        bottom: 50px;
+
+        width: 4px;
+        animation: top2bottom 1000ms 500ms backwards ease-out;
+    }
+
+    .frame>div>div:nth-child(4) {
+        left: 50px;
+        bottom: 50px;
+        right: 50px;
+
+        height: 4px;
+        animation: left2right 1000ms 1500ms backwards ease-out;
+    }
+
+    .frame>div>div:nth-child(5) {
+        background: none !important;
+        left: 50px;
+        top: 50px;
+        width: 400px;
+        height: 200px;
+        /* border: 4px solid white; */
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        z-index: 11;
+    }
+
+    .frame>div>div:nth-child(5)>div {
+        text-align: left;
+        font-size: 60pt;
+        font-family: 'DNP 秀英四号太かな Std Hv' !important;
+        line-height: 1;
+    }
+
+    @keyframes nameClip {
+        from {
+            clip-path: inset(0 0 0 100%);
+        }
+
+        to {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    .frame>div>div:nth-child(6) {
+        background: none !important;
+        right: 50px;
+        bottom: 50px;
+
+        text-align: center;
+        vertical-align: middle;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .frame>div>div:nth-child(6)>div {
+        position: relative;
+        padding: 25px;
+    }
+
+    .frame>div>div:nth-child(6)>div>div {
+        text-align: right;
+        animation: backwards nameClip 1000ms 2300ms ease-out;
+    }
+
+    .frame>div>div:nth-child(6)>div>div:nth-child(1) {
+        font-size: 48pt;
+        font-weight: bold;
+    }
+
+    .frame>div>div:nth-child(6)>div>div:nth-child(2) {
+        font-size: 24pt;
+    }
+
+    .frame>div>div:nth-child(6)>div>div:nth-child(3) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+
+        z-index: 2;
+        background-color: white;
+
+        animation: backwards right2left 500ms 2300ms ease-out, forwards right2left-out 500ms 2700ms ease-out;
+    }
+
+    .frame>div>div:nth-child(6)>div>div:nth-child(4) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 4px;
+
+        z-index: 2;
+        background-color: white;
+
+        animation: backwards top2bottom 500ms 3100ms ease-out, forwards top2bottom-out 500ms 3500ms ease-out;
+    }
+</style>
+
+<body>
+    <div class="frame">
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>
+                <div>
+                    こいくち<br>
+                    ストリーム
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>おかもと</div>
+                    <div>VV Singers</div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="mask"></div>
+        </div>
+    </div>
+</body>
