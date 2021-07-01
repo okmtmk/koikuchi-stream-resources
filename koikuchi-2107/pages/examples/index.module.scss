@@ -1,0 +1,103 @@
+$border_div_wight: 10px;
+
+@mixin tlrb($top:0, $left:0, $right:0, $bottom:0) {
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+@keyframes shrinkl2r {
+    0% {
+        transform: translateX(-100%) scaleX(0)
+    }
+
+    50% {
+        transform: translateX(0%) scaleX(1)
+    }
+
+    100% {
+        transform: translateX(100%) scaleX(0)
+    }
+}
+
+@keyframes shrinkr2l {
+    0% {
+        transform: translateX(100%) scaleX(0)
+    }
+
+    50% {
+        transform: translateX(0%) scaleX(1)
+    }
+
+    100% {
+        transform: translateX(-100%) scaleX(0)
+    }
+}
+
+@keyframes shrinkt2b {
+    0% {
+        transform: translateY(-100%) scaleY(0)
+    }
+
+    50% {
+        transform: translateY(0%) scaleY(1)
+    }
+
+    100% {
+        transform: translateY(100%) scaleY(0)
+    }
+}
+
+@keyframes shrinkb2t {
+    0% {
+        transform: translateY(100%) scaleY(0)
+    }
+
+    50% {
+        transform: translateY(0%) scaleY(1)
+    }
+
+    100% {
+        transform: translateY(-100%) scaleY(0)
+    }
+}
+
+.border-div {
+    position: absolute;
+    background-color: white;
+}
+
+.borderTop {
+    height: $border_div_wight;
+    @include tlrb($bottom:auto);
+    @extend .border-div;
+
+    animation: shrinkr2l 3s infinite linear;
+}
+
+.borderLeft {
+    width: $border_div_wight;
+    @include tlrb($right:auto);
+    @extend .border-div;
+
+    animation: shrinkb2t 3s infinite linear;
+}
+
+.borderRight {
+    width: $border_div_wight;
+    @include tlrb($left: auto);
+    @extend .border-div;
+
+    animation: shrinkt2b 3s infinite linear;
+}
+
+
+
+.borderBottom {
+    height: $border_div_wight;
+    @include tlrb($top: auto);
+    @extend .border-div;
+
+    animation: shrinkl2r 3s infinite linear;
+}
