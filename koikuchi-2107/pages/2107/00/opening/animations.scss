@@ -1,0 +1,19 @@
+@keyframes xaiImageCotnainer {
+    from {
+        transform: scale(1.05) rotate(0deg)
+    }
+
+    to {
+        transform: scale(1.1) rotate(5deg)
+    }
+}
+
+@keyframes xaiBackground {
+    from {
+        filter: blur(0px) brightness(1)
+    }
+
+    to{
+        filter: blur(10px) brightness(1.1)
+    }
+}
