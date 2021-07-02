@@ -92,21 +92,21 @@ const index = () => (
         </div>
 
         <div className={styles.mimoContainer}>
+          <div className={styles.mimoImgContainer}>
+            <div className={styles.mimoImg}>
+              <div>
+                <Image src={mimoPic} width={1440} height={1080} objectFit="cover" />
+              </div>
+              <div>
+                <Image src={mimoPicCliped} width={800} height={927} objectFit="contain" />
+              </div>
+            </div>
+          </div>
+
           <div className={styles.mimoNameContainer}>
             <div className={styles.mimoName}>
               <div>3rd</div>
               <div>おかもと</div>
-            </div>
-          </div>
-
-          <div className={styles.mimoImgContainer}>
-            <div className={styles.mimoImg}>
-              <div>
-                <Image src={mimoPicCliped} width={800} height={927} objectFit="contain" />
-              </div>
-              <div>
-                <Image src={mimoPic} width={1440} height={1080} objectFit="cover" />
-              </div>
             </div>
           </div>
         </div>
