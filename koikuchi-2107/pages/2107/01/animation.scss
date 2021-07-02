@@ -1,0 +1,33 @@
+@keyframes container {
+  from {
+    transform: translateX(-20%);
+    filter: opacity(0);
+  }
+
+  to {
+    transform: translateX(0);
+    filter: opacity(1);
+  }
+}
+
+@keyframes name {
+  from {
+    transform: translateY(-25%);
+    filter: opacity(0);
+  }
+
+  to {
+    transform: translateY(0);
+    filter: opacity(1);
+  }
+}
+
+@keyframes img {
+  from {
+    filter: drop-shadow(0 0 0 #f44336);
+  }
+
+  to {
+    filter: drop-shadow(20px 20px 0 #f44336);
+  }
+}
