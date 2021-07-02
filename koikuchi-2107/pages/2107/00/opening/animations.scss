@@ -378,19 +378,15 @@
         filter: brightness(1) blur(0);
     }
 
-    45%{
+    40%{
        filter: brightness(1) blur(0);
     }
 
-    60% {
-        filter: brightness(0.7) blur(20px);
+    75%{
+        filter: brightness(0.5) blur(20px);
     }
 
-    70%{
-        filter: brightness(0.7) blur(20px);
-    }
-
-    71%{
+    76%{
         filter: brightness(1) blur(0);
     }
 }
@@ -400,23 +396,105 @@
         transform: scale(1) rotate(0deg);
     }
 
-    45%{
+    40%{
         transform: scale(1) rotate(0deg);
     }
 
-    60% {
+    75%{
         transform: scale(1.2) rotate(5deg);
     }
 
-    70%{
-        transform: scale(1.2) rotate(5deg);
-    }
-
-    71%{
+    76%{
         transform: scale(1) rotate(0deg);
     }
 }
 
+//wiredlainのアニメーション
+@keyframes wiredlainContainer {
+    0%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    62.5%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+
+    91%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes wiredlainBackground {
+    0%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    62.5%{
+        opacity: 0;
+    }
+
+    67.5%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+
+    91%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes wiredlainForeground{
+    0%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    65%{
+        opacity: 0;
+    }
+
+    70%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+
+    91%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
 
 // xaiのアニメーション
 

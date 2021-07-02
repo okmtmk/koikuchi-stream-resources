@@ -219,8 +219,10 @@ $animation_duration: 30s;
     }
 
     .wiredlainContainer {
-      visibility: hidden;
+      visibility: visible;
       @include container;
+      background-color: #000;
+      animation: wiredlainContainer $animation_duration infinite linear;
 
       .wiredlainMainArea {
         @include container;
@@ -229,6 +231,7 @@ $animation_duration: 30s;
         align-items: center;
         flex-direction: column;
         z-index: 1;
+        animation: wiredlainForeground $animation_duration infinite linear;
 
         .wiredlainIcon {
           overflow: hidden;
@@ -257,6 +260,7 @@ $animation_duration: 30s;
 
       .wiredlainBackgroundContainer {
         @include container;
+        animation: wiredlainBackground $animation_duration infinite linear;
 
         .wiredlainBackground {
           filter: blur(20px) brightness(0.7);
