@@ -130,17 +130,17 @@ const index = () => (
         </div>
 
         <div className={styles.xaiContainer}>
-          <div className={styles.xaiName}>
-            <div>Last</div>
-            <div>xai</div>
-          </div>
           <div className={styles.xaiImageContainer}>
-            <div>
-              <Image src={xaiPicCliped} width={1440} height={1080} objectFit="contain" />
-            </div>
             <div>
               <Image src={xaiPic} width={1440} height={1080} objectFit="cover" />
             </div>
+            <div>
+              <Image src={xaiPicCliped} width={1440} height={1080} objectFit="contain" />
+            </div>
+          </div>
+          <div className={styles.xaiName}>
+            <div>Last</div>
+            <div>xai</div>
           </div>
         </div>
 
@@ -160,6 +160,9 @@ const index = () => (
         <div>
           <div>START</div>
           <div>21:00</div>
+        </div>
+        <div>
+          配信開始までお待ちください。
         </div>
       </div>
     </div>

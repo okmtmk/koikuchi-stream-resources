@@ -270,13 +270,14 @@ $animation_duration: 30s;
     }
 
     .xaiContainer {
-      visibility: hidden;
+      visibility: visible;
       @include container;
+      background-color: #fff;
+      animation: xaiContainer $animation_duration infinite linear;
 
       .xaiName {
         @include container;
         @include tlrb(auto, auto, 100px, 300px);
-        z-index: 2;
         color: #E91E63;
 
         &>div:nth-child(1) {
@@ -284,6 +285,7 @@ $animation_duration: 30s;
           font-family: 'Futura PT';
           font-style: oblique;
           font-weight: bolder;
+          animation: xaiNameA $animation_duration infinite linear;
         }
 
         &>div:nth-child(2) {
@@ -291,25 +293,25 @@ $animation_duration: 30s;
           font-family: 'Futura PT';
           font-weight: 500;
           line-height: 60pt;
+          animation: xaiNameB $animation_duration infinite linear;
         }
       }
 
       .xaiImageContainer {
         @include container;
-        transform: scale(1.05);
+        animation: xaiImgContainer $animation_duration infinite linear;
 
         &>div {
           position: absolute;
 
           &:nth-child(1) {
-            z-index: 1;
-            margin-left: 9px;
-            bottom: -7px;
+            bottom: -10px;
+            animation: xaiImgBackground $animation_duration infinite linear;
           }
 
           &:nth-child(2) {
-            bottom: 0;
-            filter: blur(10px) brightness(1.1);
+            margin-left: 9px;
+            bottom: -17px;
           }
         }
       }
@@ -354,6 +356,14 @@ $animation_duration: 30s;
           font-size: 54pt;
           font-weight: bold;
         }
+      }
+
+      &:nth-child(3){
+        margin-top: 50px;
+        color: #fff;
+        font-size: 18pt;
+        font-family: 'Noto Sans CJK JP';
+        font-weight: normal;
       }
     }
   }
