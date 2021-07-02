@@ -1,0 +1,76 @@
+@import "../../../styles/mixins.scss";
+@import "./animation.scss";
+
+$canvas_width: 1920px;
+$canvas_height: 1080px;
+
+.container {
+  width: $canvas_width;
+  height: $canvas_height;
+  position: relative;
+  overflow: hidden;
+
+  font-size: 84pt;
+  line-height: 1;
+
+  background-color: #fff;
+  animation: container 10s both;
+}
+
+@mixin container {
+  position: absolute;
+  @include tlrb(0, 0, 0, 0);
+}
+
+.mainareaContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .xaiContainer {
+    visibility: visible;
+    @include container;
+    background-color: #fff;
+
+    .xaiName {
+      @include container;
+      @include tlrb(auto, auto, 300px, 300px);
+      color: #e91e63;
+
+      & > div:nth-child(1) {
+        font-size: 48pt;
+        font-family: "Futura PT";
+        font-style: oblique;
+        font-weight: bolder;
+        animation: name 1s 10s both;
+      }
+
+      & > div:nth-child(2) {
+        font-size: 120pt;
+        font-family: "Futura PT";
+        font-weight: 500;
+        line-height: 60pt;
+        animation: name 1s 10.5s both;
+      }
+    }
+
+    .xaiImageContainer {
+      @include container;
+      animation: imgContainer 10s 1s both;
+
+      & > div {
+        position: absolute;
+
+        &:nth-child(1) {
+          bottom: -10px;
+          animation: img 5s 5s both;
+        }
+
+        &:nth-child(2) {
+          margin-left: 9px;
+          bottom: -17px;
+        }
+      }
+    }
+  }
+}

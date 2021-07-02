@@ -1,0 +1,43 @@
+@keyframes container {
+  from {
+    filter: opacity(0);
+  }
+
+  to {
+    filter: opacity(1);
+  }
+}
+
+@keyframes imgContainer {
+  from {
+    filter: brightness(5);
+    transform: scale(1.5) rotate(5deg);
+  }
+
+  to {
+    filter: brightness(1);
+    transform: scale(1.05) rotate(0deg);
+  }
+}
+
+@keyframes img {
+  from {
+    filter: brightness(1) blur(0);
+  }
+
+  to {
+    filter: brightness(1.5) blur(10px);
+  }
+}
+
+@keyframes name {
+  from {
+    transform: translateY(-25%);
+    filter: opacity(0);
+  }
+
+  to {
+    transform: translateY(0);
+    filter: opacity(1);
+  }
+}
