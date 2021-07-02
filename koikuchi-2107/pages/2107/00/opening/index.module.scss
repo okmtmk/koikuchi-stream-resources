@@ -4,7 +4,7 @@
 $canvas_width: 1920px;
 $canvas_height: 1080px;
 
-$animation_rotation_second: 30s;
+$animation_duration: 30s;
 
 .container {
   width: $canvas_width;
@@ -27,6 +27,7 @@ $animation_rotation_second: 30s;
   position: absolute;
   @include tlrb(0, 0, auto, 0);
   width: 1440px;
+  background-color: #eee;
 
   .mainareaContainer {
     width: 100%;
@@ -43,7 +44,7 @@ $animation_rotation_second: 30s;
     }
 
     .mushContainer {
-      visibility: hidden;
+      visibility: visible;
 
       @include container;
       background-color: #fff;
@@ -52,12 +53,15 @@ $animation_rotation_second: 30s;
       justify-content: center;
       align-items: center;
 
+      animation: mushContainer $animation_duration infinite linear;
+
       &>div {
         margin: 0 50px;
       }
 
       .mushName {
         color: #F44336;
+        animation: mushName $animation_duration infinite linear;
 
         &>div:nth-child(1) {
           font-size: 48pt;
@@ -74,8 +78,8 @@ $animation_rotation_second: 30s;
 
       .mushImg {
         margin-top: 300px;
-
         filter: drop-shadow(20px 20px 0 #F44336);
+        animation: mushImg $animation_duration infinite linear;
       }
     }
 
@@ -258,7 +262,7 @@ $animation_rotation_second: 30s;
     }
 
     .xaiContainer {
-      visibility: visible;
+      visibility: hidden;
       @include container;
 
       .xaiName {
@@ -285,11 +289,9 @@ $animation_rotation_second: 30s;
       .xaiImageContainer {
         @include container;
         transform: scale(1.05);
-        animation: xaiImageCotnainer 5s alternate-reverse infinite;
 
         &>div {
           position: absolute;
-
 
           &:nth-child(1) {
             z-index: 1;
@@ -300,8 +302,6 @@ $animation_rotation_second: 30s;
           &:nth-child(2) {
             bottom: 0;
             filter: blur(10px) brightness(1.1);
-
-            animation: xaiBackground 5s alternate-reverse infinite;
           }
         }
       }
