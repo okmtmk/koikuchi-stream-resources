@@ -84,9 +84,10 @@ $animation_duration: 30s;
     }
 
     .jitContainer {
-      visibility: hidden;
+      visibility: visible;
 
       @include container;
+      animation: jitContainer $animation_duration infinite linear;
 
       .jitNameContainer {
         display: flex;
@@ -97,6 +98,8 @@ $animation_duration: 30s;
         .jitName {
           margin: 100px 0;
           color: #DF59FA;
+
+          animation: jitName $animation_duration infinite linear;
 
           &>div:nth-child(1) {
             font-size: 48pt;
@@ -114,6 +117,7 @@ $animation_duration: 30s;
 
       .jitImg {
         filter: drop-shadow(20px 20px 0 #9E9E9E);
+        animation: jitImg $animation_duration infinite linear;
       }
 
       .jitBackground {
@@ -127,6 +131,9 @@ $animation_duration: 30s;
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
+
+        background-color: #F7FCF7;
+        animation: jitBackgroundB $animation_duration infinite linear;
 
         &>div {
           width: 180px;
@@ -142,17 +149,8 @@ $animation_duration: 30s;
         &>div:nth-child(16n-2),
         &>div:nth-child(16n) {
           background-color: #F7FCF7;
-        }
 
-        &>div:nth-child(16n+2),
-        &>div:nth-child(16n+4),
-        &>div:nth-child(16n+6),
-        &>div:nth-child(16n+8),
-        &>div:nth-child(16n-7),
-        &>div:nth-child(16n-5),
-        &>div:nth-child(16n-3),
-        &>div:nth-child(16n-1) {
-          background-color: #F7FCF7;
+          animation: jitBackgroundA $animation_duration infinite linear;
         }
       }
     }
