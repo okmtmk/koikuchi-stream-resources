@@ -37,7 +37,7 @@ $canvas_height: 1080px;
       @include tlrb(auto, auto, 300px, 300px);
       color: #e91e63;
 
-      & > div:nth-child(1) {
+      &>div:nth-child(1) {
         font-size: 48pt;
         font-family: "Futura PT";
         font-style: oblique;
@@ -45,7 +45,7 @@ $canvas_height: 1080px;
         animation: name 1s 10s both;
       }
 
-      & > div:nth-child(2) {
+      &>div:nth-child(2) {
         font-size: 120pt;
         font-family: "Futura PT";
         font-weight: 500;
@@ -58,7 +58,7 @@ $canvas_height: 1080px;
       @include container;
       animation: imgContainer 10s 1s both;
 
-      & > div {
+      &>div {
         position: absolute;
 
         &:nth-child(1) {

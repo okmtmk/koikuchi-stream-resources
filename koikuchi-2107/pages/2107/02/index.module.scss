@@ -12,8 +12,6 @@ $canvas_height: 1080px;
 
   font-size: 84pt;
   line-height: 1;
-
-  background-color: #000;
 }
 
 @mixin container {
@@ -43,7 +41,7 @@ $canvas_height: 1080px;
         margin: 100px 0;
         color: #df59fa;
 
-        & > div:nth-child(1) {
+        &>div:nth-child(1) {
           font-size: 48pt;
           font-family: "Futura PT";
           font-style: oblique;
@@ -51,7 +49,7 @@ $canvas_height: 1080px;
           animation: name 1s 0.5s both;
         }
 
-        & > div:nth-child(2) {
+        &>div:nth-child(2) {
           font-family: "Noto Sans CJK JP";
           font-weight: bolder;
           animation: name 1s 1s both;
@@ -78,27 +76,27 @@ $canvas_height: 1080px;
       background-color: #f7fcf7;
       animation: background 1.5s 0.75s both;
 
-      & > div {
+      &>div {
         width: 120px;
         height: 120px;
       }
 
-      & > div:nth-child(32n),
-      & > div:nth-child(32n-2),
-      & > div:nth-child(32n-4),
-      & > div:nth-child(32n-6),
-      & > div:nth-child(32n-8),
-      & > div:nth-child(32n-10),
-      & > div:nth-child(32n-12),
-      & > div:nth-child(32n-14),
-      & > div:nth-child(32n-17),
-      & > div:nth-child(32n-19),
-      & > div:nth-child(32n-21),
-      & > div:nth-child(32n-23),
-      & > div:nth-child(32n-25),
-      & > div:nth-child(32n-27),
-      & > div:nth-child(32n-29),
-      & > div:nth-child(32n-31) {
+      &>div:nth-child(32n),
+      &>div:nth-child(32n-2),
+      &>div:nth-child(32n-4),
+      &>div:nth-child(32n-6),
+      &>div:nth-child(32n-8),
+      &>div:nth-child(32n-10),
+      &>div:nth-child(32n-12),
+      &>div:nth-child(32n-14),
+      &>div:nth-child(32n-17),
+      &>div:nth-child(32n-19),
+      &>div:nth-child(32n-21),
+      &>div:nth-child(32n-23),
+      &>div:nth-child(32n-25),
+      &>div:nth-child(32n-27),
+      &>div:nth-child(32n-29),
+      &>div:nth-child(32n-31) {
         background-color: #f7fcf7;
 
         animation: background 1.5s 0s both;
