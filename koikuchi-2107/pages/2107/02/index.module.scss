@@ -1,0 +1,108 @@
+@import "../../../styles/mixins.scss";
+@import "./animation.scss";
+
+$canvas_width: 1920px;
+$canvas_height: 1080px;
+
+.container {
+  width: $canvas_width;
+  height: $canvas_height;
+  position: relative;
+  overflow: hidden;
+
+  font-size: 84pt;
+  line-height: 1;
+
+  background-color: #000;
+}
+
+@mixin container {
+  position: absolute;
+  @include tlrb(0, 0, 0, 0);
+}
+
+.mainareaContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .jitContainer {
+    visibility: visible;
+
+    @include container;
+
+    .jitNameContainer {
+      @include container;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .jitName {
+        margin: 100px 0;
+        color: #df59fa;
+
+        & > div:nth-child(1) {
+          font-size: 48pt;
+          font-family: "Futura PT";
+          font-style: oblique;
+          font-weight: bolder;
+          animation: name 1s 0.5s both;
+        }
+
+        & > div:nth-child(2) {
+          font-family: "Noto Sans CJK JP";
+          font-weight: bolder;
+          animation: name 1s 1s both;
+        }
+      }
+
+      .jitImg {
+        filter: drop-shadow(20px 20px 0 #9e9e9e);
+        animation: img 2s 1s both;
+      }
+    }
+
+    .jitBackground {
+      @include container;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      background-color: #f7fcf7;
+      animation: background 1.5s 0.75s both;
+
+      & > div {
+        width: 120px;
+        height: 120px;
+      }
+
+      & > div:nth-child(32n),
+      & > div:nth-child(32n-2),
+      & > div:nth-child(32n-4),
+      & > div:nth-child(32n-6),
+      & > div:nth-child(32n-8),
+      & > div:nth-child(32n-10),
+      & > div:nth-child(32n-12),
+      & > div:nth-child(32n-14),
+      & > div:nth-child(32n-17),
+      & > div:nth-child(32n-19),
+      & > div:nth-child(32n-21),
+      & > div:nth-child(32n-23),
+      & > div:nth-child(32n-25),
+      & > div:nth-child(32n-27),
+      & > div:nth-child(32n-29),
+      & > div:nth-child(32n-31) {
+        background-color: #f7fcf7;
+
+        animation: background 1.5s 0s both;
+      }
+    }
+  }
+}
