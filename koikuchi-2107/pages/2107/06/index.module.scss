@@ -1,0 +1,78 @@
+@import "../../../styles/mixins.scss";
+
+$canvas_width: 1920px;
+$canvas_height: 1080px;
+
+.container {
+    width: $canvas_width;
+    height: $canvas_height;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+
+    padding: 50px 400px;
+
+    color: #fff;
+    background-color: #000;
+
+    .heading {
+        font-size: 60pt;
+        line-height: 60pt;
+        font-family: 'Futura PT';
+        font-weight: bolder;
+
+        margin: 20px 0;
+    }
+
+    .playerContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .player {
+        margin-left: 20px;
+
+        &>div:nth-child(1) {
+            font-family: 'Futura PT', 'Noto Sans CJK JP';
+            font-weight: normal;
+            font-style: oblique;
+
+            font-size: 36pt;
+            line-height: 42pt;
+        }
+
+        &>div:nth-child(2) {
+            font-family: 'Futura PT', 'Noto Sans CJK JP';
+            font-weight: bold;
+            font-style: normal;
+
+            font-size: 60pt;
+            line-height: 60pt;
+        }
+    }
+
+    &>div {
+        width: 100%;
+        height: 100%;
+    }
+
+    &>.leftPane {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &>.rightPane {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@mixin container {
+    position: absolute;
+    @include tlrb(0, 0, 0, 0);
+}
